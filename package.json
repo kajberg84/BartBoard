@@ -1,0 +1,43 @@
+{
+  "name": "exercise-bart-board",
+  "version": "2.0.0",
+  "description": "1DV025 - Exercise Module B - Bart Board",
+  "type": "module",
+  "browser": "js/index.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "lint": "npx eslint ./src || exit 0",
+    "lint:fix": "npx eslint ./src --fix || exit 0"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@lnu/eslint-config": "^1.1.0",
+    "eslint": "^7.11.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "^30.6.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "snowpack": "^2.14.0"
+  },
+  "eslintConfig": {
+    "extends": "@lnu"
+  },
+  "snowpack": {
+    "mount": {
+      "public": "/",
+      "src": "/js"
+    },
+    "scripts": {
+      "run:info": "echo Press Ctrl+C to terminate"
+    },
+    "devOptions": {
+      "bundle": false
+    }
+  }
+}
